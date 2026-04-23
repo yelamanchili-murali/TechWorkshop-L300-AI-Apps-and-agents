@@ -258,11 +258,11 @@ resource containerApp 'Microsoft.App/containerApps@2024-03-01' = {
             { name: 'AZURE_TRACING_GEN_AI_CONTENT_RECORDING_ENABLED', value: 'true' }
             // Model deployment defaults (names and API versions)
             { name: 'FOUNDRY_API_VERSION', value: '2025-01-01-preview' }
-            { name: 'gpt_deployment', value: 'gpt-5.4-mini' }
+            { name: 'gpt_deployment', value: 'gpt-5.4-mini-1' }
             { name: 'gpt_api_version', value: '2025-01-01-preview' }
-            { name: 'embedding_deployment', value: 'text-embedding-3-large' }
+            { name: 'embedding_deployment', value: 'text-embedding-3-large-1' }
             { name: 'embedding_api_version', value: '2025-01-01-preview' }
-            { name: 'phi_4_deployment', value: 'Phi-4' }
+            { name: 'phi_4_deployment', value: 'Phi-4-1' }
             { name: 'phi_4_api_version', value: '2024-05-01-preview' }
             // Agent IDs
             { name: 'customer_loyalty', value: 'customer-loyalty' }
@@ -278,7 +278,7 @@ resource containerApp 'Microsoft.App/containerApps@2024-03-01' = {
         }
       ]
       scale: {
-        minReplicas: 0
+        minReplicas: 1
         maxReplicas: 1
       }
     }
